@@ -52,7 +52,7 @@ func TestJSONReport(t *testing.T) {
 	reporter := NewReporter(&buf)
 
 	data := &ReportData{
-		ServerName:   "test-server",
+		ServerName:    "test-server",
 		ServerVersion: "1.0.0",
 		Summary: SummaryData{
 			Grade: "A",
@@ -79,9 +79,9 @@ func TestMarkdownReport(t *testing.T) {
 	reporter := NewReporter(&buf)
 
 	data := &ReportData{
-		ServerName:   "test-server",
+		ServerName:    "test-server",
 		ServerVersion: "1.0.0",
-		ToolsCount:   1,
+		ToolsCount:    1,
 		Tools: []ToolData{
 			{Name: "my-tool", Description: "A test tool", HasSchema: true},
 		},
@@ -110,11 +110,11 @@ func TestCompactReport(t *testing.T) {
 	reporter := NewReporter(&buf)
 
 	data := &ReportData{
-		ServerName:    "test-server",
-		ServerVersion: "1.0.0",
-		ToolsCount:    3,
+		ServerName:     "test-server",
+		ServerVersion:  "1.0.0",
+		ToolsCount:     3,
 		ResourcesCount: 2,
-		PromptsCount:  1,
+		PromptsCount:   1,
 		Summary: SummaryData{
 			Grade: "A",
 			Score: 95,

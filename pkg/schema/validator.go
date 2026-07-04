@@ -22,8 +22,8 @@ func NewValidator(schemaJSON []byte) (*Validator, error) {
 
 // ValidationResult represents the result of a validation
 type ValidationResult struct {
-	Valid   bool              `json:"valid"`
-	Errors  []ValidationError `json:"errors,omitempty"`
+	Valid  bool              `json:"valid"`
+	Errors []ValidationError `json:"errors,omitempty"`
 }
 
 // ValidationError represents a single validation error

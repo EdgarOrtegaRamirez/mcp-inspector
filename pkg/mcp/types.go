@@ -149,7 +149,7 @@ type GetPromptResult struct {
 }
 
 type PromptMessage struct {
-	Role    string         `json:"role"`
+	Role    string       `json:"role"`
 	Content ContentBlock `json:"content"`
 }
 

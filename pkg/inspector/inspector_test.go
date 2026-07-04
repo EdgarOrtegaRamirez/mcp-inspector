@@ -160,7 +160,7 @@ func TestGradeAssignment(t *testing.T) {
 		// Set up TestResults to produce the desired score
 		totalTests := 10
 		passedTests := tt.score * totalTests / 100
-		
+
 		testResults := make([]TestResult, totalTests)
 		for i := 0; i < passedTests; i++ {
 			testResults[i] = TestResult{Status: "pass"}
@@ -168,7 +168,7 @@ func TestGradeAssignment(t *testing.T) {
 		for i := passedTests; i < totalTests; i++ {
 			testResults[i] = TestResult{Status: "fail"}
 		}
-		
+
 		insp := &Inspector{
 			results: &InspectionResults{
 				Summary:     &Summary{},

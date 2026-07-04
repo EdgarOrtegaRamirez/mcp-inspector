@@ -15,7 +15,7 @@ type Client struct {
 
 // ServerCapabilities stores server capabilities discovered during initialization
 type ServerCapabilities struct {
-	Info        ServerInfo
+	Info         ServerInfo
 	Capabilities Capabilities
 }
 
@@ -65,7 +65,7 @@ func (c *Client) Initialize(ctx context.Context) (*ServerCapabilities, error) {
 	}
 
 	c.server = &ServerCapabilities{
-		Info:        result.ServerInfo,
+		Info:         result.ServerInfo,
 		Capabilities: result.Capabilities,
 	}
 

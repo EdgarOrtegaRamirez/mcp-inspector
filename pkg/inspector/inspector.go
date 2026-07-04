@@ -11,21 +11,21 @@ import (
 
 // Inspector is the core inspection engine
 type Inspector struct {
-	client   *mcp.Client
-	server   *mcp.ServerCapabilities
-	results  *InspectionResults
+	client  *mcp.Client
+	server  *mcp.ServerCapabilities
+	results *InspectionResults
 }
 
 // InspectionResults stores all inspection results
 type InspectionResults struct {
-	StartTime     time.Time              `json:"start_time"`
-	EndTime       time.Time              `json:"end_time"`
-	ServerInfo    *ServerInfoResult      `json:"server_info"`
-	Tools         *ToolsResult           `json:"tools,omitempty"`
-	Resources     *ResourcesResult       `json:"resources,omitempty"`
-	Prompts       *PromptsResult         `json:"prompts,omitempty"`
-	TestResults   []TestResult           `json:"test_results,omitempty"`
-	Summary       *Summary               `json:"summary"`
+	StartTime   time.Time         `json:"start_time"`
+	EndTime     time.Time         `json:"end_time"`
+	ServerInfo  *ServerInfoResult `json:"server_info"`
+	Tools       *ToolsResult      `json:"tools,omitempty"`
+	Resources   *ResourcesResult  `json:"resources,omitempty"`
+	Prompts     *PromptsResult    `json:"prompts,omitempty"`
+	TestResults []TestResult      `json:"test_results,omitempty"`
+	Summary     *Summary          `json:"summary"`
 }
 
 // ServerInfoResult stores server info
@@ -37,8 +37,8 @@ type ServerInfoResult struct {
 
 // ToolsResult stores tools inspection results
 type ToolsResult struct {
-	Count  int            `json:"count"`
-	Tools  []ToolInfo     `json:"tools"`
+	Count int        `json:"count"`
+	Tools []ToolInfo `json:"tools"`
 }
 
 // ToolInfo stores information about a single tool
@@ -71,9 +71,9 @@ type PromptsResult struct {
 
 // PromptInfo stores information about a single prompt
 type PromptInfo struct {
-	Name        string           `json:"name"`
-	Description string           `json:"description,omitempty"`
-	Arguments   []ArgumentInfo   `json:"arguments,omitempty"`
+	Name        string         `json:"name"`
+	Description string         `json:"description,omitempty"`
+	Arguments   []ArgumentInfo `json:"arguments,omitempty"`
 }
 
 // ArgumentInfo stores information about a prompt argument
@@ -109,7 +109,7 @@ func NewInspector(client *mcp.Client) *Inspector {
 		client: client,
 		results: &InspectionResults{
 			StartTime: time.Now(),
-			Summary: &Summary{},
+			Summary:   &Summary{},
 		},
 	}
 }

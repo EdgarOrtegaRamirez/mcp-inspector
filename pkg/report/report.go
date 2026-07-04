@@ -22,17 +22,17 @@ func NewReporter(w io.Writer) *Reporter {
 
 // ReportData contains all data needed for report generation
 type ReportData struct {
-	ServerName    string
-	ServerVersion string
-	Capabilities  []string
-	ToolsCount    int
-	Tools         []ToolData
+	ServerName     string
+	ServerVersion  string
+	Capabilities   []string
+	ToolsCount     int
+	Tools          []ToolData
 	ResourcesCount int
-	Resources     []ResourceData
-	PromptsCount  int
-	Prompts       []PromptData
-	TestResults   []TestData
-	Summary       SummaryData
+	Resources      []ResourceData
+	PromptsCount   int
+	Prompts        []PromptData
+	TestResults    []TestData
+	Summary        SummaryData
 }
 
 // ToolData for report
@@ -269,9 +269,9 @@ var yellow = color.New(color.FgYellow).SprintFunc()
 func GenerateReport(results interface{}, format string, writer io.Writer) error {
 	// This is a simplified version - in production, you'd properly type-assert
 	data := &ReportData{
-		ServerName:   "unknown",
+		ServerName:    "unknown",
 		ServerVersion: "unknown",
-		Summary:      SummaryData{Grade: "N/A"},
+		Summary:       SummaryData{Grade: "N/A"},
 	}
 
 	reporter := NewReporter(writer)

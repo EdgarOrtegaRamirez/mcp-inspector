@@ -65,7 +65,7 @@ var validateCmd = &cobra.Command{
 	Long: `Validate that an MCP server's tool schemas are valid JSON Schema
 and that tool responses match expected formats.`,
 	Args: cobra.MinimumNArgs(1),
-	RunE:  runValidate,
+	RunE: runValidate,
 }
 
 var testCmd = &cobra.Command{
@@ -74,7 +74,7 @@ var testCmd = &cobra.Command{
 	Long: `Run integration tests against an MCP server by calling all tools
 with sample data and verifying responses.`,
 	Args: cobra.MinimumNArgs(1),
-	RunE:  runTest,
+	RunE: runTest,
 }
 
 var docsCmd = &cobra.Command{
