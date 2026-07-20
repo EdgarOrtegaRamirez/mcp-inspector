@@ -1,9 +1,9 @@
 module github.com/EdgarOrtegaRamirez/mcp-inspector
 
-go 1.24.0
+go 1.25.0
 
 require (
-	github.com/fatih/color v1.19.0
+	github.com/fatih/color v1.18.0
 	github.com/spf13/cobra v1.10.2
 )
 
